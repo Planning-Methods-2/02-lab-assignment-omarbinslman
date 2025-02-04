@@ -68,6 +68,8 @@ library(tigris)
 
 
 #type ?census_api_key to get your Census API for full access.
+census_api_key("0d539976d5203a96fa55bbf4421110d4b3db3648", overwrite = TRUE)
+
 
 age10 <- get_decennial(geography = "state", 
                        variables = "P013001", 
@@ -77,7 +79,7 @@ head(age10)
 
 
 bexar_medincome <- get_acs(geography = "tract", variables = "B19013_001",
-                           state = "TX", county = "Bexar", geometry = TRUE)
+                           state = "TX", county = "Bexar", geometry = T)
 
 
 View(bexar_medincome)
